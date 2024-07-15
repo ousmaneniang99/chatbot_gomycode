@@ -1,5 +1,5 @@
-pip install --upgrade pip
-Checking if Streamlit is installed
+#pip install --upgrade pip
+#Checking if Streamlit is installed
 import openai
 import streamlit as st
 
