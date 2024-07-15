@@ -6,7 +6,10 @@ import streamlit as st
 # Configurez votre clé API OpenAI
 openai.api_key = 'sk-proj-6wIkgsetv8g7g0bPHM3DT3BlbkFJLXEb0Cv2Zf4VlTBLxHZf'
 
-# Function to get response from OpenAI API
+# Définir la clé API OpenAI
+openai.api_key = 'votre_cle_api_openai'
+
+# Fonction pour obtenir une réponse de l'API OpenAI
 def get_openai_response(question):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
@@ -17,7 +20,7 @@ def get_openai_response(question):
     )
     return response['choices'][0]['message']['content']
 
-# Streamlit app
+# Application Streamlit
 def main():
     st.title("Chatbot avec OpenAI")
     st.write("Posez-moi n'importe quelle question !")
