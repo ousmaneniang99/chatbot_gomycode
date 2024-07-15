@@ -8,7 +8,7 @@ openai.api_key = 'sk-proj-6wIkgsetv8g7g0bPHM3DT3BlbkFJLXEb0Cv2Zf4VlTBLxHZf'
 
 # Définir une fonction pour obtenir une réponse de l'API OpenAI
 def get_openai_response(prompt):
-    response = openai.completion.create(
+    response = openai.ChatCompletion.create(
         model="text-davinci-003",
         prompt=prompt,
         max_tokens=150,
