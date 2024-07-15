@@ -4,7 +4,7 @@ import openai
 import streamlit as st
 
 # Configurez votre clé API OpenAI
-openai.api_key = 'sk-proj-6wIkgsetv8g7g0bPHM3DT3BlbkFJLXEb0Cv2Zf4VlTBLxHZf'
+openai.api_key = 'sk-proj-BayixLUGzeIG5cpmavpVT3BlbkFJVOTlG2yvqtJlzP6eKRjE'
 
 # Définir la clé API OpenAI
 openai.api_key = 'votre_cle_api_openai'
