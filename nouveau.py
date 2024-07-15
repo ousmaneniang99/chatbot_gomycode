@@ -1,4 +1,4 @@
-pip install --upgrade openai
+pip install openai==0.28
 #Checking if Streamlit is installed
 import openai
 import streamlit as st
