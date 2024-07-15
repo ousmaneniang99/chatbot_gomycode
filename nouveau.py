@@ -6,9 +6,6 @@ import streamlit as st
 # Configurez votre clé API OpenAI
 openai.api_key = 'sk-proj-BayixLUGzeIG5cpmavpVT3BlbkFJVOTlG2yvqtJlzP6eKRjE'
 
-# Définir la clé API OpenAI
-openai.api_key = 'votre_cle_api_openai'
-
 # Fonction pour obtenir une réponse de l'API OpenAI
 def get_openai_response(question):
     response = openai.ChatCompletion.create(
