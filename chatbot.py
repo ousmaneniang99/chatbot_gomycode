@@ -48,8 +48,7 @@ if st.session_state.quiz_active:
     # Get user's response
     user_response = st.text_input("You:")
 
-    # Evaluate the response
-    if st.button("Submit"):
-        st.text(f"You said: {user_response}")
+    if st.button("Soumettre"):
+        st.text(f"Vous avez dit: {user_response}")
         st.session_state.question = generate_question()
         st.session_state.iteration += 1
