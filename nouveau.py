@@ -46,7 +46,7 @@ def main():
 
     # Ajout de crédits ou d'informations supplémentaires en bas de la page
     st.markdown("---")
-    st.markdown("Développé par [Votre Nom](https://www.linkedin.com/in/votre-profil) | [GitHub](https://github.com/votre-profil)")
+    st.markdown("Développé par [Ousmane Niang](https://www.linkedin.com/in/votre-profil) | [GitHub](https://github.com/ousmaneniang99/chatbot_gomycode/blob/main/nouveau.py)")
     st.markdown("© 2024 Chatbot AI. Tous droits réservés.")
 
 if __name__ == "__main__":
