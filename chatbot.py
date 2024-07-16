@@ -1,15 +1,11 @@
-#pip install openai==0.28
-#Checking if Streamlit is installed
+import os
 import openai
 import streamlit as st
-# Configurez votre clé API OpenAI
-openai.api_key = 'sk-proj-BayixLUGzeIG5cpmavpVT3BlbkFJVOTlG2yvqtJlzP6eKRjE'
 
-# Ensure streamlit and openai are installed
-# pip install streamlit opena
+# Configurez votre clé API OpenAI à partir des variables d'environnement
+openai.api_key = os.getenv('sk-proj-BayixLUGzeIG5cpmavpVT3BlbkFJVOTlG2yvqtJlzP6eKRjE')
 
-
-# Function to get a response from the OpenAI GPT-3.5 API
+# Fonction pour obtenir une question de l'API OpenAI GPT-3.5
 def generate_question():
     chat_history = [
         {"role": "system", "content": "You are a helpful assistant."},
@@ -24,30 +20,31 @@ def generate_question():
     question = response['choices'][0]['message']['content'].strip()
     return question
 
-# Streamlit UI
+# Interface utilisateur Streamlit
 st.title("Vitamin Quiz Bot")
 
-# Initialize session state
+# Initialiser l'état de session
 if 'iteration' not in st.session_state:
     st.session_state.iteration = 0
     st.session_state.quiz_active = False
     st.session_state.question = ""
 
-# Main loop for the quiz
-user_input = st.text_input(f"You (Iteration {st.session_state.iteration}):")
+# Boucle principale pour le quiz
+user_input = st.text_input(f"Vous (Itération {st.session_state.iteration}):")
 
-if user_input.lower() == "lets begin the quiz":
+if user_input.lower() == "commençons le quiz":
     st.session_state.quiz_active = True
     st.session_state.question = generate_question()
     st.session_state.iteration += 1
 
 if st.session_state.quiz_active:
-    # Display the question
+    # Afficher la question
     st.text(f"Bot: {st.session_state.question}")
 
-    # Get user's response
-    user_response = st.text_input("You:")
+    # Obtenir la réponse de l'utilisateur
+    user_response = st.text_input("Vous:")
 
+    # Bouton pour soumettre la réponse
     if st.button("Soumettre"):
         st.text(f"Vous avez dit: {user_response}")
         st.session_state.question = generate_question()
