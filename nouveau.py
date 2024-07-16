@@ -20,7 +20,7 @@ def get_openai_response(question):
 # Application Streamlit
 def main():
     # Configurer la page
-    st.set_page_config(page_title="Chatbot avec OpenAI GPT-3.5", page_icon="🤖", layout="wide")
+    st.set_page_config(page_title="Chatbot", page_icon="🤖", layout="wide")
 
     # En-tête et sous-titre
     st.title("Chatbot")
