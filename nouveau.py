@@ -23,7 +23,7 @@ def main():
     st.set_page_config(page_title="Chatbot avec OpenAI GPT-3.5", page_icon="🤖", layout="wide")
 
     # En-tête et sous-titre
-    st.title("Chatbot avec OpenAI GPT-3.5")
+    st.title("Chatbot")
     st.markdown("### Posez-moi n'importe quelle question !")
 
     # Ajouter une image ou un logo
