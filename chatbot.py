@@ -1,14 +1,11 @@
-#pip install openai==0.28
-#Checking if Streamlit is installed
 import openai
 import streamlit as st
 import time
 
-# Configurez votre clé API OpenAI
+# Configuration de la  clé API OpenAI
 openai.api_key ='sk-proj-8WDxw0HoLkNgmMo4S9EnT3BlbkFJIoaAOrKJEGdiEcdpfpFF'
 
 #  Fonction pour obtenir une réponse de l'API OpenAI GPT-3.5
-# Fonction pour obtenir une réponse de l'API OpenAI GPT-3.5
 def get_openai_response(question):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
